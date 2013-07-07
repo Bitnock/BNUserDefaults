@@ -18,6 +18,8 @@ In practice you would do something like
 
 Be sure to call `[super initialize]` if you override the initialize method.
 
+If you're going to use `BNUserDefaults`, you should never access `NSUserDefaults` directly, except for `resetStandardUserDefaults`. If you were to go through `NSUserDefaults` before `BNUserDefaults`, the registration of your defaults, or anything else you expect to happen on `initialize` would be circumvented, and you could run into issues.
+
 ### Example
 
 In this example, there will be an `incrementLaunchCount` that we expect to get called from other parts of the app, and a `cacheVersionString` that we only want to get called when the class is initialized. It stores a string value of the current app version, which could be displayed in the iOS Setting app.
