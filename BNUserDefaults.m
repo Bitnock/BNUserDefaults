@@ -28,7 +28,7 @@
 
 @interface BNUserDefaults ()
 
-+ (NSDictionary*)defaults;
++ (NSDictionary *)defaults;
 
 @end
 
@@ -39,11 +39,11 @@
   [NSUserDefaults.standardUserDefaults synchronize];
 }
 
-+ (NSDictionary*)defaults {
++ (NSDictionary *)defaults {
   return @{};
 }
 
-+ (NSUserDefaults*)settings {
++ (NSUserDefaults *)settings {
   return NSUserDefaults.standardUserDefaults;
 }
 
