@@ -24,10 +24,10 @@
 //  THE SOFTWARE.
 //
 
-#import <Foundation/Foundation.h>
+@import Foundation;
 
 @interface BNUserDefaults : NSUserDefaults
 
-+ (NSUserDefaults*)settings;
++ (NSUserDefaults *)settings;
 
 @end
